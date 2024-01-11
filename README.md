@@ -134,7 +134,12 @@ Next, we will create our DynamoDB database.<br/>
   AWS CLI should increase response by 1 and records will automatically update in DynamoDB table.
   <img src=https://i.imgur.com/yjESmmK.png" height="80%" width="80%" /><br/>
 
-
+<p align="center">
+<b>[Step 6] Serverless Web Application Testing</b> <br/>
+Test if the serverless web application built with S3, Cloudfront, Route53, DynamoDB and Lambda is working properly.<br/>
+<br/>
+View demo video of the simple application built in this project: <br/> 
+ https://github.com/kevinnyeo/aws-serverless-web-application/assets/141112043/9c32cb9f-2ec2-402b-9c80-05a74d552173
 
 
 
