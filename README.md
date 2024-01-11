@@ -113,12 +113,26 @@ Next, we will create our DynamoDB database.<br/>
  2. Create a new table item 'Views' to track web applciation viewcount.  <br/>
  <img src=https://i.imgur.com/THOf1kJ.png" height="80%" width="80%" /><br/>
 <br/>
- 3. In preparation for next step, we will create a new role in IAM to allow AWS Lambda to access our DynamoDB table.
+
+<p align="center">
+<b>[Step 5] Creation of AWS Lambda Function and Integration with Dynamo DB <br/>
+<br/>
+ 1. Create a new role in IAM to allow AWS Lambda to access our DynamoDB table.<br/>
   <img src=https://i.imgur.com/0u4coed.png" height="80%" width="80%" /><br/>
   <img src=https://i.imgur.com/FHlEHxg.png" height="80%" width="80%" /><br/>
   <img src=https://i.imgur.com/a8kyIvZ.png" height="80%" width="80%" /><br/>
 <br/>
-
+  2. Create a Lambda function for updating viewcount on our website. <br/>
+  <img src=https://i.imgur.com/znoMQyH.png" height="80%" width="80%" /><br/>
+  <img src=https://i.imgur.com/95O4PNO.png" height="80%" width="80%" /><br/>
+<br/>
+  3. Assign the IAM role created to the Lambda function under permissions. <br/>
+  <img src=https://i.imgur.com/w02727d.png" height="80%" width="80%" /><br/>
+  <img src=https://i.imgur.com/k2SHJ0t.png" height="80%" width="80%" /><br/>
+ <br/>
+  4. Test the Lambda function by running 'curl {function url}' in Cloudshell. <br/>
+  AWS CLI should increase response by 1 and records will automatically update in DynamoDB table.
+  <img src=https://i.imgur.com/yjESmmK.png" height="80%" width="80%" /><br/>
 
 
 
