@@ -70,18 +70,37 @@ Cloudfront distribution is needed to serve S3 static files with low latency. <br
  <img src="https://i.imgur.com/BxVoeY6.png" height="80%" width="80%" /><br/>
  <img src="https://i.imgur.com/kV4GEJG.png" height="80%" width="80%" /><br/>
 <br/>
- 4. Next, in our Cloudfront distribution, we need to define a root object. In this case it will be our html file name. 
+ 4. Next, in our Cloudfront distribution, we need to define a root object. In this case it will be our html file name stored in our S3 bucket. 
  <img src="https://i.imgur.com/gHoeyMM.png" height="80%" width="80%" /><br/>
  <img src="https://i.imgur.com/29gKWvZ.png" height="80%" width="80%" /><br/>
 
-
-
-
-
-
-
-
-
+<p align="center">
+<b>[Step 3] Configuration of AWS Route53 & AWS Certificate Manager<br/>
+Route53 is the AWS based DNS service we will be using. Register free SSL/TLS certificate via ACM. <br/>
+<br/>
+ 1. Create a hosted zone in Route53 with a registered domain name. <br/>
+ <img src="https://i.imgur.com/4Jrs0rY.png" height="80%" width="80%" /><br/>
+<br/>
+ 2. Copy the nameservers provided by AWS and add it to domain host website. <br/>
+ <img src=https://i.imgur.com/3qrjkJB.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/uRV1VWT.png" height="80%" width="80%" /><br/>
+<br/>
+ 3. Add a subdomain in our previously created Cloudfront distribution and request a certificate from ACM. <br/>
+ <img src=https://i.imgur.com/IsGLPg4.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/Yi3N9fR.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/D6bpUGr.png" height="80%" width="80%" /><br/>
+<br/>
+ 4. Create a new CNAME record in Route53 with our assigned certificate. <br/>
+ <img src=https://i.imgur.com/5afFqRF.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/4q3wEik.png" height="80%" width="80%" /><br/>
+<br/>
+ 5. Create a record in Route53 Hosted zone to route traffic to our Cloudfront distribution. <br/>
+ <img src=https://i.imgur.com/gsvyVkx.png" height="80%" width="80%" /><br/>
+<br/>
+ 6. Website will now be propagated with SSL certificate. (Use DNSChecker.org to check for DNS propagation.) <br/>
+ <img src=https://i.imgur.com/LbsYeXG.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/c3mOnyj.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/5eVGgSm.png" height="80%" width="80%" /><br/>
 
 
 
