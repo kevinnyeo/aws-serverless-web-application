@@ -102,9 +102,22 @@ Route53 is the AWS based DNS service we will be using. Register free SSL/TLS cer
  <img src=https://i.imgur.com/c3mOnyj.png" height="80%" width="80%" /><br/>
  <img src=https://i.imgur.com/5eVGgSm.png" height="80%" width="80%" /><br/>
 
-
-
-
+<p align="center">
+<b>[Step 4] AWS DynamaDB<br/> 
+Next, we will create our DynamoDB database.<br/>
+<br/>
+ 1. Create a new DynamoDB table. <br/>
+ <img src=https://i.imgur.com/45zcisy.png" height="80%" width="80%" /><br/>
+ <img src=https://i.imgur.com/RWfg4gI.png" height="80%" width="80%" /><br/>
+<br/>
+ 2. Create a new table item 'Views' to track web applciation viewcount.  <br/>
+ <img src=https://i.imgur.com/THOf1kJ.png" height="80%" width="80%" /><br/>
+<br/>
+ 3. In preparation for next step, we will create a new role in IAM to allow AWS Lambda to access our DynamoDB table.
+  <img src=https://i.imgur.com/0u4coed.png" height="80%" width="80%" /><br/>
+  <img src=https://i.imgur.com/FHlEHxg.png" height="80%" width="80%" /><br/>
+  <img src=https://i.imgur.com/a8kyIvZ.png" height="80%" width="80%" /><br/>
+<br/>
 
 
 
